@@ -18,11 +18,9 @@ class ViewController: UIViewController {
     let pomodoro: Double = 30  //change back to 1500 after testing
     let shortBreak: Double = 300
     let longBreak: Double = 1200
-    let temp = 0
     
     var timeToFinish: NSDate = NSDate()
     
-    @IBOutlet weak var pomCounter: UILabel!
     @IBOutlet weak var countdownView: UILabel!
     
     @IBAction func stopButton(_ sender: Any) {

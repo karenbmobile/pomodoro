@@ -14,6 +14,7 @@
 		9C1A74EB1F72D29C00E2043B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A74E91F72D29C00E2043B /* LaunchScreen.storyboard */; };
 		9CDF925B1F7426C0001B6A0F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF925A1F7426C0001B6A0F /* UserNotifications.framework */; };
 		9CDF925E1F757A38001B6A0F /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF925C1F757A38001B6A0F /* TaskModel.xcdatamodeld */; };
+		9CDF92621F761211001B6A0F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF92611F761211001B6A0F /* TasksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9C1A74EC1F72D29C00E2043B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CDF925A1F7426C0001B6A0F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		9CDF925D1F757A38001B6A0F /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		9CDF92611F761211001B6A0F /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9C1A74E01F72D29C00E2043B /* AppDelegate.swift */,
 				9C1A74E21F72D29C00E2043B /* ViewController.swift */,
 				9C1A74E41F72D29C00E2043B /* Main.storyboard */,
+				9CDF92611F761211001B6A0F /* TasksTableViewController.swift */,
 				9C1A74E71F72D29C00E2043B /* Assets.xcassets */,
 				9C1A74E91F72D29C00E2043B /* LaunchScreen.storyboard */,
 				9CDF925C1F757A38001B6A0F /* TaskModel.xcdatamodeld */,
@@ -153,6 +156,7 @@
 			files = (
 				9C1A74E31F72D29C00E2043B /* ViewController.swift in Sources */,
 				9C1A74E11F72D29C00E2043B /* AppDelegate.swift in Sources */,
+				9CDF92621F761211001B6A0F /* TasksTableViewController.swift in Sources */,
 				9CDF925E1F757A38001B6A0F /* TaskModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
