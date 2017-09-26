@@ -73,21 +73,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414.375" y="362.32394366197184"/>
+            <point key="canvasLocation" x="392" y="60"/>
         </scene>
-        <!--Tasks Table View Controller-->
+        <!--Today-->
         <scene sceneID="Ctm-Aj-Jbj">
             <objects>
-                <tableViewController id="UsM-Cx-veq" customClass="TasksTableViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Today" id="UsM-Cx-veq" customClass="TasksTableViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R3k-dk-dJ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="n56-jf-jKt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="NwO-7z-hhE">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n56-jf-jKt" id="6va-3i-kA8">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NwO-7z-hhE" id="Plm-68-CRz">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -98,10 +98,19 @@
                             <outlet property="delegate" destination="UsM-Cx-veq" id="xXO-T3-3xv"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Tasks" id="rKd-gN-O65">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MFv-bb-J1A">
+                            <connections>
+                                <action selector="addTask:" destination="UsM-Cx-veq" id="PIi-2T-DQ8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xy-4B-bf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="370"/>
+            <point key="canvasLocation" x="1268" y="59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RPM-0S-MVy">

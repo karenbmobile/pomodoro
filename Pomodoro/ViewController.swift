@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var timer = Timer()
     
     //set the pomodoro and break times
-    let pomodoro: Double = 30  //change back to 1500 after testing
+    let pomodoro: Double = 1500  //change back to 1500 after testing
     let shortBreak: Double = 300
     let longBreak: Double = 1200
     
