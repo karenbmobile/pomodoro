@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var timeToFinish: NSDate = NSDate()
     
     @IBOutlet weak var countdownView: UILabel!
+    @IBOutlet weak var activeTaskLabel: UILabel!
     
     @IBAction func stopButton(_ sender: Any) {
         //stop the timer

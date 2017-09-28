@@ -183,20 +183,36 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     // MARK: - Table view
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
 
+    //completed status to be header of section
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let sectionInfo = fetchedResultsController.sections?[section] {
+            
+            if sectionInfo.name == "0" {
+                return "To Do"
+            }
+            else if sectionInfo.name == "1" {
+                return "Completed"
+            }
+        }
+        return nil
+    }
+    //return the number of rows grouped by completed or not completed
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return taskList.count
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        cell.textLabel?.text = taskList[indexPath.row]
+        let taskObject = self.fetchedResultsController.object(at: indexPath)
+        
+        //TODO: replace this with a call to configureCell once I am ready to put extra detail into the cell
+        cell.textLabel?.text = taskObject.taskDescription
 
         return cell
     }
