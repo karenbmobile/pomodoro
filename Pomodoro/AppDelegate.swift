@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //MARK: - Core Data Stack
     lazy var persistentContainer:NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Task Model")
+        let container = NSPersistentContainer(name: "TaskModel")
         container.loadPersistentStores(completionHandler: {(storeDescription:NSPersistentStoreDescription, error: Error?) in
             if let error = error as NSError? {
                 print(error.localizedDescription)

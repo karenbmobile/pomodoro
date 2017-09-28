@@ -16,14 +16,75 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     var taskList = ["+"]
     
     @IBAction func addTask(_ sender: Any) {
-        //add a task to the list
+    //add a task to the list
+        
+        //call a modal view with a text field + save and cancel buttons
+        let alert = UIAlertController(title: "New Task",
+                                      message: "Add a task",
+                                      preferredStyle: .alert)
+        
+        
+        let saveAction = UIAlertAction(title: "Save",
+                                       style: .default) {
+                                        [unowned self] action in
+                                        
+                                        guard let textField = alert.textFields?.first,
+                                            let taskToSave = textField.text else {
+                                                return
+                                        }
+                                        
+                                        //call the save function
+                                        self.save(description: taskToSave)
+                                        
+                                        self.tableView.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
+        alert.addTextField()
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert,animated: true)
         
     }
+    
+    //save new task
+    func save(description: String) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Tasks", in: managedContext)!
+        
+        let task = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        task.setValue(description, forKeyPath: "taskDescription")
+        task.setValue(NSDate(), forKey: "dateAdded")
+        task.setValue(false, forKey: "doneIndicator")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            
+            print("Could not save. \(error), \(error.userInfo)")
+            
+        }
+        
+    }
+        
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
