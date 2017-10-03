@@ -25,6 +25,8 @@
 		9C1A74E71F72D29C00E2043B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1A74EA1F72D29C00E2043B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1A74EC1F72D29C00E2043B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C689A611F7F49BC006DAEED /* ic_check_box_outline_blank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_check_box_outline_blank.jpg; sourceTree = "<group>"; };
+		9C689A621F7F49BC006DAEED /* ic_check_box.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_check_box.jpg; sourceTree = "<group>"; };
 		9CDF925A1F7426C0001B6A0F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		9CDF925D1F757A38001B6A0F /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 		9CDF92611F761211001B6A0F /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 				9C1A74E91F72D29C00E2043B /* LaunchScreen.storyboard */,
 				9CDF925C1F757A38001B6A0F /* TaskModel.xcdatamodeld */,
 				9C1A74EC1F72D29C00E2043B /* Info.plist */,
+				9C689A611F7F49BC006DAEED /* ic_check_box_outline_blank.jpg */,
+				9C689A621F7F49BC006DAEED /* ic_check_box.jpg */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";

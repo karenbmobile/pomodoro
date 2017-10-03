@@ -15,14 +15,39 @@ class ViewController: UIViewController {
     var timer = Timer()
     
     //set the pomodoro and break times
-    let pomodoro: Double = 1500  //change back to 1500 after testing
+    let pomodoro: Double = 30  //change back to 1500 after testing
     let shortBreak: Double = 300
     let longBreak: Double = 1200
     
     var timeToFinish: NSDate = NSDate()
     
+    //set the controls for what label to display
+    //var timerRunning = false
+    var pomodoroCount = 0
+    
     @IBOutlet weak var countdownView: UILabel!
     @IBOutlet weak var activeTaskLabel: UILabel!
+    
+    
+    @IBAction func bigRedTimerButton(_ sender: Any) {
+        //let the user tap the red area to start and stop the timer
+        //is dependent on fillTimerLabel() working correctly
+        switch countdownView.text {
+        case ("Pomodoro"?):
+            setAlarmAndDisplay(alarmType: "Pomodoro", seconds: pomodoro)
+        case ("Short Break"?):
+            setAlarmAndDisplay(alarmType: "Short Break", seconds: shortBreak)
+        case ("Long Break"?):
+            setAlarmAndDisplay(alarmType: "Long Break", seconds: longBreak)
+        default:
+            //stop the timer and cancel the notification
+            timer.invalidate()
+            let center = UNUserNotificationCenter.current()
+            center.removeAllPendingNotificationRequests()
+        }
+        
+    }
+    
     
     @IBAction func stopButton(_ sender: Any) {
         //stop the timer
@@ -42,7 +67,19 @@ class ViewController: UIViewController {
         let timeRemaining = timeToFinish.timeIntervalSince(currentDate as Date)
         
         if timeRemaining / 60 <= 0 {
-            countdownView.text = "Done"
+            if let info = timer.userInfo as? String {
+                if info == "Short Break" || info == "Long Break" {
+                    countdownView.text = "Pomodoro"
+                }
+                else if pomodoroCount % 4 == 0 {
+                    countdownView.text = "Long Break"
+                }
+                else {
+                    countdownView.text = "Short Break"
+                }
+            }
+            
+            /*countdownView.text = String(describing: info)*/
             timer.invalidate()
         } else {
             //format remaining time and display
@@ -67,10 +104,12 @@ class ViewController: UIViewController {
             timeToFinish = NSDate.init(timeIntervalSinceNow: longBreak)
         default: //pomodoro
             timeToFinish = NSDate.init(timeIntervalSinceNow: pomodoro)
+            pomodoroCount += 1
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(displayTheCountdown), userInfo: nil, repeats: true)
-        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(displayTheCountdown), userInfo: alarmType, repeats: true)
+ 
+
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
@@ -105,7 +144,6 @@ class ViewController: UIViewController {
     
     @IBAction func startShortBreak(_ sender: Any) {
         setAlarmAndDisplay(alarmType: "Short Break", seconds: shortBreak)
-
     }
     
     @IBAction func startLongBreak(_ sender: Any) {
@@ -124,9 +162,11 @@ class ViewController: UIViewController {
         countdownView.layer.cornerRadius = 100;
         countdownView.clipsToBounds = true;
         
-        
+
         
             }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
