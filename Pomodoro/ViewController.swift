@@ -69,17 +69,19 @@ class ViewController: UIViewController {
         if timeRemaining / 60 <= 0 {
             if let info = timer.userInfo as? String {
                 if info == "Short Break" || info == "Long Break" {
+                    countdownView.font = countdownView.font.withSize(36)
                     countdownView.text = "Pomodoro"
                 }
                 else if pomodoroCount % 4 == 0 {
+                    countdownView.font = countdownView.font.withSize(34)
                     countdownView.text = "Long Break"
                 }
                 else {
+                    countdownView.font = countdownView.font.withSize(34)
                     countdownView.text = "Short Break"
                 }
             }
             
-            /*countdownView.text = String(describing: info)*/
             timer.invalidate()
         } else {
             //format remaining time and display
