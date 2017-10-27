@@ -13,7 +13,6 @@
 		9C1A74E81F72D29C00E2043B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A74E71F72D29C00E2043B /* Assets.xcassets */; };
 		9C1A74EB1F72D29C00E2043B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A74E91F72D29C00E2043B /* LaunchScreen.storyboard */; };
 		9CDF925B1F7426C0001B6A0F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF925A1F7426C0001B6A0F /* UserNotifications.framework */; };
-		9CDF925E1F757A38001B6A0F /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF925C1F757A38001B6A0F /* TaskModel.xcdatamodeld */; };
 		9CDF92621F761211001B6A0F /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF92611F761211001B6A0F /* TasksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		9C689A611F7F49BC006DAEED /* ic_check_box_outline_blank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_check_box_outline_blank.jpg; sourceTree = "<group>"; };
 		9C689A621F7F49BC006DAEED /* ic_check_box.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_check_box.jpg; sourceTree = "<group>"; };
 		9CDF925A1F7426C0001B6A0F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
-		9CDF925D1F757A38001B6A0F /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 		9CDF92611F761211001B6A0F /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +68,6 @@
 				9CDF92611F761211001B6A0F /* TasksTableViewController.swift */,
 				9C1A74E71F72D29C00E2043B /* Assets.xcassets */,
 				9C1A74E91F72D29C00E2043B /* LaunchScreen.storyboard */,
-				9CDF925C1F757A38001B6A0F /* TaskModel.xcdatamodeld */,
 				9C1A74EC1F72D29C00E2043B /* Info.plist */,
 				9C689A611F7F49BC006DAEED /* ic_check_box_outline_blank.jpg */,
 				9C689A621F7F49BC006DAEED /* ic_check_box.jpg */,
@@ -161,7 +158,6 @@
 				9C1A74E31F72D29C00E2043B /* ViewController.swift in Sources */,
 				9C1A74E11F72D29C00E2043B /* AppDelegate.swift in Sources */,
 				9CDF92621F761211001B6A0F /* TasksTableViewController.swift in Sources */,
-				9CDF925E1F757A38001B6A0F /* TaskModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,19 +342,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9CDF925C1F757A38001B6A0F /* TaskModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9CDF925D1F757A38001B6A0F /* TaskModel.xcdatamodel */,
-			);
-			currentVersion = 9CDF925D1F757A38001B6A0F /* TaskModel.xcdatamodel */;
-			path = TaskModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9C1A74D51F72D29C00E2043B /* Project object */;
 }
