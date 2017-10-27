@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Pomodoro.xcodeproj">
+      location = "self:/Users/karen/Desktop/MyApps/TaskMaster/TaskMaster.xcodeproj">
    </FileRef>
 </Workspace>

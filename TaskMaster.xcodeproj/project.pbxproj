@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C1A74DD1F72D29C00E2043B /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1A74DD1F72D29C00E2043B /* TaskMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1A74E01F72D29C00E2043B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C1A74E21F72D29C00E2043B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C1A74E51F72D29C00E2043B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		9C1A74D41F72D29C00E2043B = {
 			isa = PBXGroup;
 			children = (
-				9C1A74DF1F72D29C00E2043B /* Pomodoro */,
+				9C1A74DF1F72D29C00E2043B /* TaskMaster */,
 				9C1A74DE1F72D29C00E2043B /* Products */,
 				9CDF92591F7426BF001B6A0F /* Frameworks */,
 			);
@@ -56,12 +56,12 @@
 		9C1A74DE1F72D29C00E2043B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C1A74DD1F72D29C00E2043B /* Pomodoro.app */,
+				9C1A74DD1F72D29C00E2043B /* TaskMaster.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C1A74DF1F72D29C00E2043B /* Pomodoro */ = {
+		9C1A74DF1F72D29C00E2043B /* TaskMaster */ = {
 			isa = PBXGroup;
 			children = (
 				9C1A74E01F72D29C00E2043B /* AppDelegate.swift */,
@@ -75,7 +75,7 @@
 				9C689A611F7F49BC006DAEED /* ic_check_box_outline_blank.jpg */,
 				9C689A621F7F49BC006DAEED /* ic_check_box.jpg */,
 			);
-			path = Pomodoro;
+			path = TaskMaster;
 			sourceTree = "<group>";
 		};
 		9CDF92591F7426BF001B6A0F /* Frameworks */ = {
@@ -89,9 +89,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C1A74DC1F72D29C00E2043B /* Pomodoro */ = {
+		9C1A74DC1F72D29C00E2043B /* TaskMaster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C1A74EF1F72D29C00E2043B /* Build configuration list for PBXNativeTarget "Pomodoro" */;
+			buildConfigurationList = 9C1A74EF1F72D29C00E2043B /* Build configuration list for PBXNativeTarget "TaskMaster" */;
 			buildPhases = (
 				9C1A74D91F72D29C00E2043B /* Sources */,
 				9C1A74DA1F72D29C00E2043B /* Frameworks */,
@@ -101,9 +101,9 @@
 			);
 			dependencies = (
 			);
-			name = Pomodoro;
+			name = TaskMaster;
 			productName = Pomodoro;
-			productReference = 9C1A74DD1F72D29C00E2043B /* Pomodoro.app */;
+			productReference = 9C1A74DD1F72D29C00E2043B /* TaskMaster.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C1A74D81F72D29C00E2043B /* Build configuration list for PBXProject "Pomodoro" */;
+			buildConfigurationList = 9C1A74D81F72D29C00E2043B /* Build configuration list for PBXProject "TaskMaster" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C1A74DC1F72D29C00E2043B /* Pomodoro */,
+				9C1A74DC1F72D29C00E2043B /* TaskMaster */,
 			);
 		};
 /* End PBXProject section */
@@ -300,9 +300,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89CK5WCQHQ;
-				INFOPLIST_FILE = Pomodoro/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TaskMaster/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.twl.Pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twl.TaskMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,9 +315,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89CK5WCQHQ;
-				INFOPLIST_FILE = Pomodoro/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TaskMaster/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.twl.Pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twl.TaskMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C1A74D81F72D29C00E2043B /* Build configuration list for PBXProject "Pomodoro" */ = {
+		9C1A74D81F72D29C00E2043B /* Build configuration list for PBXProject "TaskMaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C1A74ED1F72D29C00E2043B /* Debug */,
@@ -336,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C1A74EF1F72D29C00E2043B /* Build configuration list for PBXNativeTarget "Pomodoro" */ = {
+		9C1A74EF1F72D29C00E2043B /* Build configuration list for PBXNativeTarget "TaskMaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C1A74F01F72D29C00E2043B /* Debug */,
